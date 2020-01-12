@@ -108,7 +108,7 @@ public void drawPointyRoof(Robot robby) {
 	robby.move(3);
 	robby.move(90);
 	robby.move(3);
-	robby.turn(90);
+	robby.turn(45);
 }
 public void drawFlatRoof(Robot robbb) {
 	robbb.turn(90);
