@@ -10,8 +10,6 @@ public class Houses {
 		rob.penDown();
 		rob.setSpeed(75);
 		
-		//fix colors
-		
 		house(rob,"small","red");
 		rob.turn(270);
 		rob.setPenColor(0,255,0);
@@ -72,6 +70,16 @@ public class Houses {
 public void house(Robot rob, String height, String color) {
 	int iheight=0;
 	
+	if(color.equals("red")) {
+		rob.setPenColor(255,0,0);
+	}
+	else if (color.equals("blue")) {
+		rob.setPenColor(0,0,255);
+	}
+	else if (color.equals("purple")) {
+		rob.setPenColor(255,0,255);
+	}
+	
 	if(height.equals("small")) {
 		iheight = 60;
 		rob.move(iheight);
@@ -90,24 +98,16 @@ public void house(Robot rob, String height, String color) {
 		drawPointyRoof(rob);
 		rob.move(iheight);
 	}
-	if(color.equals("red")) {
-		rob.setPenColor(255,0,0);
-	}
-	else if (color.equals("blue")) {
-		rob.setPenColor(0,0,255);
-	}
-	else if (color.equals("purple")) {
-		rob.setPenColor(255,0,255);
-	}
+
 		
 
 
 	}
 public void drawPointyRoof(Robot robby) {
 	robby.turn(45);
-	robby.move(3);
-	robby.move(90);
-	robby.move(3);
+	robby.move(12);
+	robby.turn(90);
+	robby.move(12);
 	robby.turn(45);
 }
 public void drawFlatRoof(Robot robbb) {
